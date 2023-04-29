@@ -1,0 +1,4 @@
+.input-group input,
+.input-group span {
+  background-color: var(--purple-200);
+}

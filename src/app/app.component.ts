@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ItemProps } from './item-list/item-list.component';
-
+import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,8 +10,9 @@ export class AppComponent {
   items: ItemProps[] = [];
   pageSize: number = 5;
   page: number = 1;
+  isVisible = false;
 
-  constructor() {
+  constructor(private deviceService: DeviceDetectorService) {
     for (let i = 0; i < 1000; i++) {
       this.items.push({
         email: `Sample email ${i}`,
@@ -20,5 +21,6 @@ export class AppComponent {
         name: `Sample name ${i}`,
       });
     }
+    this.isVisible = deviceService.isMobile();
   }
 }

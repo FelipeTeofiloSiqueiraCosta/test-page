@@ -1,0 +1,26 @@
+.Container header {
+  background-color: var(--purple-200);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  color: #bab6c4;
+}
+
+.Container header .icon {
+  cursor: pointer;
+}
+
+.Container main {
+  margin: 0.3rem 2rem;
+}
+.Container main div {
+  color: #a5a3b1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 720px) {
+  .Container main div {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,18 @@
+.App {
+  width: 97%;
+  background-color: var(--purple-100);
+  margin: 1rem auto;
+  border-radius: 5px;
+}
+
+ngb-pagination ::ng-deep ul > li:not(.active) > a {
+  background-color: var(--purple-100);
+  border: 0;
+  color: white;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+  color: var(--bs-pagination-color) !important;
+  background-color: var(--purple-100);
+  border: 0;
+}

@@ -1,0 +1,32 @@
+<div class="Container">
+  <header class="d-flex justify-content-between align-items-center">
+    {{ item.email }}
+    <div class="d-flex gap-2 align-items-center">
+      <i-bs name="pencil" class="icon"> </i-bs>
+      <i-bs name="trash" class="icon text-danger"> </i-bs>
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckChecked"
+          checked
+        />
+      </div>
+    </div>
+  </header>
+  <main>
+    <div>
+      <div>ID</div>
+      <p class="m-0">{{ item.id }}</p>
+    </div>
+    <div>
+      <div>Nome</div>
+      <p class="m-0">{{ item.name }}</p>
+    </div>
+    <div>
+      <div>Jogos</div>
+      <p class="m-0">{{ item.games }}</p>
+    </div>
+  </main>
+</div>

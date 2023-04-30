@@ -1,11 +1,15 @@
 <div *ngIf="isVisible" class="input-group mb-3">
   <input
+    #email
     type="text"
     class="form-control border-0 text-white"
     placeholder="Busque o e-mail desejado"
     aria-label="Amount (to the nearest dollar)"
   />
-  <span class="input-group-text border-0">
+  <span
+    class="input-group-text border-0"
+    (click)="handleSearchButton(email.value)"
+  >
     <i-bs name="search" width="15" height="15" style="color: white"> </i-bs>
   </span>
 </div>
